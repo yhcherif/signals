@@ -1,0 +1,45 @@
+{
+  "name": "@youssoufcherif/signals-node",
+  "version": "0.0.0",
+  "description": "Lightweight console-based Signals provider - no OpenTelemetry dependency.",
+  "license": "MIT",
+  "author": "Youssouf Cherif Hamed <youssouf.cherif.hamed@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhcherif/signals.git",
+    "directory": "packages/node"
+  },
+  "homepage": "https://github.com/yhcherif/signals/tree/main/packages/node#readme",
+  "bugs": "https://github.com/yhcherif/signals/issues",
+  "keywords": ["telemetry", "observability", "signals", "console", "structured-logging"],
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "LICENSE"],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@youssoufcherif/signals-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    format-and-lint:
+      glob: "*.{ts,tsx,js,json}"
+      run: pnpm exec biome check --write --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
+    boundaries:
+      glob: "packages/**/*.ts"
+      run: node scripts/check-boundaries.mjs
+
+pre-push:
+  commands:
+    typecheck:
+      run: pnpm typecheck
+    test:
+      run: pnpm test

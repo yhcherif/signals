@@ -1,0 +1,49 @@
+{
+  "name": "@youssoufcherif/signals-opentelemetry",
+  "version": "0.0.0",
+  "description": "OpenTelemetry adapter for Signals. The only package in this ecosystem that depends on @opentelemetry/*.",
+  "license": "MIT",
+  "author": "Youssouf Cherif Hamed <youssouf.cherif.hamed@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhcherif/signals.git",
+    "directory": "packages/opentelemetry"
+  },
+  "homepage": "https://github.com/yhcherif/signals/tree/main/packages/opentelemetry#readme",
+  "bugs": "https://github.com/yhcherif/signals/issues",
+  "keywords": ["telemetry", "observability", "signals", "opentelemetry", "otel", "adapter"],
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "LICENSE"],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@youssoufcherif/signals-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.9.0"
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.0.0"
+  }
+}

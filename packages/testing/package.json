@@ -1,0 +1,45 @@
+{
+  "name": "@youssoufcherif/signals-testing",
+  "version": "0.0.0",
+  "description": "Assertion helpers for testing code instrumented with Signals.",
+  "license": "MIT",
+  "author": "Youssouf Cherif Hamed <youssouf.cherif.hamed@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhcherif/signals.git",
+    "directory": "packages/testing"
+  },
+  "homepage": "https://github.com/yhcherif/signals/tree/main/packages/testing#readme",
+  "bugs": "https://github.com/yhcherif/signals/issues",
+  "keywords": ["telemetry", "observability", "signals", "testing", "assertions", "vitest"],
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "LICENSE"],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@youssoufcherif/signals-core": "workspace:*",
+    "@youssoufcherif/signals-memory": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

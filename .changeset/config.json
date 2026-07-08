@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.4/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [
+    [
+      "@youssoufcherif/signals-core",
+      "@youssoufcherif/signals-memory",
+      "@youssoufcherif/signals-noop",
+      "@youssoufcherif/signals-node",
+      "@youssoufcherif/signals-opentelemetry",
+      "@youssoufcherif/signals-testing"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "privatePackages": {
+    "version": false,
+    "tag": false
+  },
+  "ignore": []
+}

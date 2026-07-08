@@ -1,0 +1,23 @@
+{
+  "name": "@youssoufcherif/signals-examples",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "otel": "tsx src/checkout-otel.ts",
+    "node": "tsx src/checkout-node.ts",
+    "memory": "tsx src/checkout-memory.ts"
+  },
+  "dependencies": {
+    "@youssoufcherif/signals-core": "workspace:*",
+    "@youssoufcherif/signals-memory": "workspace:*",
+    "@youssoufcherif/signals-node": "workspace:*",
+    "@youssoufcherif/signals-noop": "workspace:*",
+    "@youssoufcherif/signals-opentelemetry": "workspace:*",
+    "@opentelemetry/api": "^1.9.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  }
+}

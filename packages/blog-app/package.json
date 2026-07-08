@@ -1,0 +1,30 @@
+{
+  "name": "@youssoufcherif/blog-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "SIGNALS_PROVIDER=node tsx watch src/server.ts",
+    "dev:memory": "SIGNALS_PROVIDER=memory tsx watch src/server.ts",
+    "dev:otel": "SIGNALS_PROVIDER=otel tsx watch src/server.ts",
+    "dev:noop": "SIGNALS_PROVIDER=noop tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "hono": "^4.6.0",
+    "@hono/node-server": "^1.13.0",
+    "@youssoufcherif/signals-core": "workspace:*",
+    "@youssoufcherif/signals-memory": "workspace:*",
+    "@youssoufcherif/signals-noop": "workspace:*",
+    "@youssoufcherif/signals-node": "workspace:*",
+    "@youssoufcherif/signals-opentelemetry": "workspace:*"
+  },
+  "devDependencies": {
+    "@youssoufcherif/signals-testing": "workspace:*",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "tsx": "^4.19.0"
+  }
+}
