@@ -28,6 +28,11 @@ jobs:
 
       - name: Install
         run: pnpm install --frozen-lockfile
+        env:
+          LEFTHOOK: 0
+
+      - name: Build
+        run: pnpm build
 
       - name: Create version PR or publish to npm
         uses: changesets/action@v1
@@ -39,3 +44,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          LEFTHOOK: 0
