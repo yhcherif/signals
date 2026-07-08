@@ -1,6 +1,6 @@
 {
   "name": "@youssoufcherif/signals-noop",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Zero-overhead Signals provider - every operation is a no-op.",
   "license": "MIT",
   "author": "Youssouf Cherif Hamed <youssouf.cherif.hamed@gmail.com>",
@@ -11,7 +11,13 @@
   },
   "homepage": "https://github.com/yhcherif/signals/tree/main/packages/noop#readme",
   "bugs": "https://github.com/yhcherif/signals/issues",
-  "keywords": ["telemetry", "observability", "signals", "noop", "zero-overhead"],
+  "keywords": [
+    "telemetry",
+    "observability",
+    "signals",
+    "noop",
+    "zero-overhead"
+  ],
   "type": "module",
   "sideEffects": false,
   "engines": {
@@ -25,7 +31,10 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "LICENSE"],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public",
     "provenance": true
